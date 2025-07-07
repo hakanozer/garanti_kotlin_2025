@@ -1,3 +1,5 @@
+import kotlin.arrayOf
+
 class Action {
 
     val name = "Salih"
@@ -26,6 +28,25 @@ class Action {
             params(it, name)
         }
         return count
+    }
+
+    fun order(a: Double, b: Double, fncAction: (Double, Double) -> Double) : Double {
+        var end = fncAction(a, b)
+        end -= 10
+        return end
+    }
+
+    fun fnc2(data: String, num1: Int): Any {
+        if (num1 > 1) {
+            return data.length + num1
+        }else {
+            return data
+        }
+    }
+
+    fun fnc3(num: Int, data: String): Array<Int>  {
+        val arr = arrayOf(num, data.length)
+        return arr
     }
 
 

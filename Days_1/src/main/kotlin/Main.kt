@@ -139,4 +139,17 @@ fun main() {
 
     val chars = action.fnc1("Kemal", 11)
     println(chars)
+
+    val orderFncSum = action.order(55.9, 44.3, ::sumOrder)
+    println(orderFncSum)
+
+    val orderFncMinus = action.order(55.9, 44.3, ::minusOrder)
+    println(orderFncMinus)
+
+    val useList = UseList()
+    useList.info()
+
+    println("=======================")
+    val userListModel = UseListModel()
+    userListModel.info()
 }
