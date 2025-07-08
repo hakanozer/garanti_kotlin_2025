@@ -2,6 +2,10 @@ package com.works
 
 import com.works.actions.Order
 import com.works.actions.Profile
+import com.works.inheritance.A
+import com.works.inheritance.B
+import com.works.inheritance.Base
+import com.works.inheritance.C
 import com.works.utils.EControl
 import com.works.utils.EUser
 
@@ -24,5 +28,21 @@ fun main() {
 
     val order = Order()
     order.info()
+    println("============================")
 
+    val a = A("Kemal")
+    val b = B("Selin")
+    val c = C("Serkan")
+
+    allCall(a)
+    allCall(b)
+    allCall(c)
+
+}
+
+fun allCall(obj: Base) {
+    if (obj is A) {
+        obj.call2()
+    }
+    obj.call()
 }

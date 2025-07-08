@@ -5,8 +5,12 @@ class Order {
     var id: Int = 0
     var status: Boolean = false
 
+    init {
+        println("init Order created - 1")
+    }
+
     constructor() {
-        print("no params constructor")
+        println("no params constructor -2")
     }
 
     constructor(id: Int) {
@@ -19,7 +23,7 @@ class Order {
     }
 
     fun info() {
-        print("id: $id status: $status")
+        println("id: $id status: $status")
     }
 
 }
