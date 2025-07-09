@@ -45,4 +45,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(group = "com.squareup.retrofit2", name = "retrofit", version = "2.9.0")
+    implementation(group = "com.squareup.retrofit2", name = "converter-gson", version = "2.9.0")
+
+
 }
