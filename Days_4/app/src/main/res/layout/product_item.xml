@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/pi_image"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pi_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="iPhone 16 Max" />
+
+        <TextView
+            android:id="@+id/pi_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#03A9F4"
+            android:textSize="12sp"
+            tools:text="Elektronik" />
+
+        <TextView
+            android:id="@+id/pi_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#F44336"
+            android:textSize="20sp"
+            tools:text="190₺" />
+    </LinearLayout>
+
+</LinearLayout>
