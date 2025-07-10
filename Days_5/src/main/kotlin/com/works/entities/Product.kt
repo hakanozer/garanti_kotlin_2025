@@ -1,5 +1,7 @@
 package com.works.entities
 
+import com.fasterxml.jackson.annotation.JsonIgnore
+import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -15,12 +17,14 @@ data class Product(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var pid: Long? = null,
 
+    @Column(unique = true)
     var title: String,
     var description: String,
     var price: Double,
-    var createdDate: LocalDateTime? = null,
-    var updatedDate: LocalDateTime? = null,
-) {
+    @JsonIgnore var createdDate: LocalDateTime? = null,
+    @JsonIgnore var updatedDate: LocalDateTime? = null,
+
+    ) {
 
     @PrePersist
     fun prePersist() {
